@@ -13,8 +13,13 @@ First we need to run APACHE KAFKA Instance. Here are the steps for the same, ass
     C:\kafka_2.12-0.10.2.1>.\bin\windows\kafka-server-start.bat .\config\server.properties
     
 4. Open a new command prompt and create a topic with name tejinder-topic, that has only one partition & one replica.    
+    
     C:\kafka_2.12-0.10.2.1>.\bin\windows\kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic tejinder-topic
-
+    
+    And use the below command to see all the topics created :
+    
+    C:\kafka_2.12-0.10.2.1>.\bin\windows\kafka-topics.bat --list --zookeeper localhost:2181 
+    
 5. Next Open a new command prompt and create a producer to send message to the above created tejinder-topic and send a message - This is my first message-
     C:\kafka_2.12-0.10.2.1>.\bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic tejinder-topic
     This is my first message
